@@ -14,3 +14,13 @@ SOLUTION- "use client"; // Enables the component to handle client-side interacti
 class-variance-authority will allow us to make the danger its own variance rather than stated over and over. 
 
 Note: CLSX conditionally chooses (the class variations defined within) class-variant-authority 
+
+
+Touched
+Page.tsx
+components/Button.tsx
+util/cn.ts
+
+gitignore
+readme
+
