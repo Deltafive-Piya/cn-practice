@@ -1,4 +1,4 @@
-A demo using cn(clsx+twMerge) demonstrating the juggling of Client and SSR within Reacty Next.
+A demo using cn(clsx+twMerge) demonstrating the juggling of Client and SSR within React && Next.
 
 
 Encountered Error:
