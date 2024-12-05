@@ -1,4 +1,4 @@
-"use client"; // Enables the component to handle client-side interactivity
+"use client";
 import cn from "@/util/cn";
 import { cva, VariantProps } from "class-variance-authority";
 import { ButtonHTMLAttributes, ReactNode } from "react";
@@ -14,13 +14,13 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 }
 
 interface ButtonProps
+	// Absorb Native ButtonElementType to allow button prop control @page.tsx
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
-	// Absorb Native ButtonElementType to allow button prop control @page.tsx
 	children: ReactNode; // React/TS Doc standard
 }
-//TODO- twMerge step 1- include destructuring "className" from the props
-//TODO- twMerge step 3- include destructuring "variant and size" from the cva-declared props
+//  destructuring className && variant && size from the cva-declared props
+
 export default function Button({
 	children,
 	className,
@@ -32,7 +32,7 @@ export default function Button({
 		<button
 			//TODO- twMerge step 2- curly the style
 			//TODO- twMerge step 4- pass variant && size
-			className={cn(buttonVariants({variant, size, className}))}
+			className={cn(buttonVariants({ variant, size, className }))}
 			// Apply page's props passed to the button, moved below classNametwMerge so page.tsx-explicit style succeeds previous styling
 			{...props}
 		>
@@ -41,7 +41,7 @@ export default function Button({
 	);
 }
 
-//TODO- cva step 1- declare variants
+// cva- declared variants of button
 const buttonVariants = cva("rounded-md", {
 	variants: {
 		variant: {

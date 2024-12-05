@@ -1,4 +1,4 @@
-"use client"; // Alter Next.js default SSR => handle client-side interactivity
+"use client";
 import Button from "../components/Button";
 
 export default function Home() {
